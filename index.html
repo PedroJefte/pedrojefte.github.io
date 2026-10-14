@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro Jefte · Desenvolvedor Front-end</title>
+    <meta name="description" content="Portfólio de Pedro Jefte, desenvolvedor front-end em formação em busca de estágio. Projetos em HTML, CSS e JavaScript.">
+
+    <!-- Prévia quando o link é colado no LinkedIn e no WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pedro Jefte · Desenvolvedor Front-end">
+    <meta property="og:description" content="Desenvolvedor front-end em formação, em busca de estágio. Veja meus projetos.">
+    <meta property="og:url" content="https://pedrojefte.github.io/">
+    <meta property="og:image" content="https://pedrojefte.github.io/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="topo">
+        <a class="marca" href="#inicio">Pedro Jefte</a>
+        <nav aria-label="Seções">
+            <a href="#projetos">Projetos</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main id="conteudo">
+
+        <!-- ===================== INÍCIO ===================== -->
+        <section id="inicio" class="abertura">
+            <p class="status"><span class="ponto" aria-hidden="true"></span> Em busca de estágio em desenvolvimento</p>
+            <h1>Pedro<br>Jefte</h1>
+            <p class="chamada">
+                Desenvolvedor front-end em formação. Construo páginas com HTML, CSS e JavaScript e
+                meu primeiro projeto publicado é o CineVibe, um catálogo de filmes com busca e favoritos.
+            </p>
+            <div class="acoes">
+                <a class="botao botao-cheio" href="#projetos">Ver projetos</a>
+                <a class="botao" href="curriculo-pedro-jefte.pdf" download>Baixar currículo</a>
+            </div>
+        </section>
+
+        <!-- ===================== PROJETOS ===================== -->
+        <section id="projetos" class="secao">
+            <h2>Projetos</h2>
+
+            <!-- Para adicionar um projeto, copie o <article class="ingresso"> inteiro e troque os textos -->
+            <article class="ingresso">
+                <a class="ingresso-imagem" href="https://pedrojefte.github.io/CineVibetrue/" tabindex="-1" aria-hidden="true">
+                    <img src="img/cinevibe.jpg" alt="" width="1200" height="750" loading="lazy">
+                </a>
+                <div class="ingresso-corpo">
+                    <h3>CineVibe</h3>
+                    <p>
+                        Catálogo de filmes e animes. Na página inicial dá para buscar por título enquanto digita e
+                        marcar favoritos, que continuam salvos quando você volta. Cada filme tem sinopse, elenco
+                        e avaliação com estrelas.
+                    </p>
+                    <ul class="fatos">
+                        <li>Busca em tempo real com JavaScript</li>
+                        <li>Favoritos salvos com localStorage</li>
+                        <li>Layout responsivo para celular</li>
+                    </ul>
+                </div>
+                <div class="ingresso-canhoto">
+                    <p class="tecnologias">HTML, CSS, JavaScript</p>
+                    <a href="https://pedrojefte.github.io/CineVibetrue/">Abrir site</a>
+                    <a href="https://github.com/PedroJefte/CineVibetrue">Ver código</a>
+                </div>
+            </article>
+
+            <!-- Quando terminar o próximo projeto, troque este bloco por um <article class="ingresso"> como o de cima -->
+            <article class="ingresso ingresso-proximo">
+                <div class="ingresso-corpo">
+                    <h3>Próximo projeto em produção</h3>
+                    <p>[Conte em uma frase o que você está construindo agora, por exemplo: uma lista de tarefas que salva no navegador.]</p>
+                </div>
+                <div class="ingresso-canhoto">
+                    <p class="tecnologias">[Tecnologias]</p>
+                    <a href="https://github.com/PedroJefte">Acompanhar no GitHub</a>
+                </div>
+            </article>
+        </section>
+
+        <!-- ===================== SOBRE ===================== -->
+        <section id="sobre" class="secao sobre">
+            <h2>Sobre</h2>
+            <div class="sobre-texto">
+                <!-- EDITE: troque os colchetes pelas suas informações -->
+                <p>Sou o Pedro, de [cidade], e estudo [curso] na [instituição].</p>
+                <p>
+                    Comecei a programar pelo front-end porque gosto de ver o resultado na hora, no navegador.
+                    No CineVibe aprendi a manipular o DOM, a guardar dados com localStorage e a adaptar o
+                    layout para o celular.
+                </p>
+                <p>Agora estou estudando [o que está estudando] e procuro um estágio para aprender em um time de verdade.</p>
+            </div>
+            <dl class="sobre-fatos">
+                <div>
+                    <dt>Formação</dt>
+                    <dd>[Curso] · [Instituição] · conclusão em [ano]</dd>
+                </div>
+                <div>
+                    <dt>Tecnologias</dt>
+                    <dd>HTML, CSS, JavaScript, Git, GitHub, VS Code</dd>
+                </div>
+                <div>
+                    <dt>Estudando</dt>
+                    <dd>[ex.: JavaScript moderno e React]</dd>
+                </div>
+                <div>
+                    <dt>Disponível para</dt>
+                    <dd>Estágio · [presencial em cidade / híbrido / remoto]</dd>
+                </div>
+            </dl>
+        </section>
+
+        <!-- ===================== CONTATO ===================== -->
+        <section id="contato" class="secao contato">
+            <h2>Contato</h2>
+            <p>Tem uma vaga de estágio ou quer conversar sobre um projeto? Me chama.</p>
+            <a class="email" href="mailto:[seu-email]">[seu-email]</a>
+            <ul class="redes">
+                <li><a href="https://www.linkedin.com/in/pedro-jefte-407651405/">LinkedIn</a></li>
+                <li><a href="https://github.com/PedroJefte">GitHub</a></li>
+                <li><a href="curriculo-pedro-jefte.pdf" download>Currículo em PDF</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>Feito por Pedro Jefte com HTML, CSS e JavaScript · <span id="ano">2026</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

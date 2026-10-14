@@ -1,0 +1,421 @@
+/* ============ Cores e fontes (troque aqui para mudar o visual inteiro) ============ */
+:root {
+    --papel: #f2f3f6;
+    --cartao: #ffffff;
+    --tinta: #1a2238;
+    --tinta-suave: #545d73;
+    --linha: #d8dbe3;
+    --ingresso: #ffc94a;
+    --ingresso-tinta: #3b2a00;
+
+    --fonte-titulo: "Bricolage Grotesque", system-ui, sans-serif;
+    --fonte-texto: "Atkinson Hyperlegible", system-ui, sans-serif;
+
+    --largura: 1040px;
+    --margem: clamp(16px, 5vw, 48px);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --papel: #121828;
+        --cartao: #1b2336;
+        --tinta: #eef0f6;
+        --tinta-suave: #a7aec0;
+        --linha: #2c3650;
+    }
+}
+
+/* ============ Base ============ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--papel);
+    color: var(--tinta);
+    font-family: var(--fonte-texto);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+a:focus-visible,
+.botao:focus-visible {
+    outline: 3px solid var(--ingresso);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--fonte-titulo);
+    line-height: 1.05;
+    margin: 0;
+}
+
+.pular {
+    position: absolute;
+    left: -9999px;
+}
+
+.pular:focus {
+    left: 16px;
+    top: 16px;
+    background: var(--ingresso);
+    color: var(--ingresso-tinta);
+    padding: 8px 12px;
+    z-index: 10;
+}
+
+/* ============ Topo ============ */
+.topo {
+    max-width: var(--largura);
+    margin: 0 auto;
+    padding: 20px var(--margem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.marca {
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.topo nav {
+    display: flex;
+    gap: 20px;
+}
+
+.topo nav a {
+    text-decoration: none;
+    color: var(--tinta-suave);
+}
+
+.topo nav a:hover {
+    color: var(--tinta);
+}
+
+/* ============ Abertura ============ */
+main {
+    max-width: var(--largura);
+    margin: 0 auto;
+    padding: 0 var(--margem);
+}
+
+.abertura {
+    padding: clamp(48px, 10vw, 120px) 0 clamp(56px, 9vw, 104px);
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 24px;
+    color: var(--tinta-suave);
+}
+
+.ponto {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #2fa36b;
+}
+
+.abertura h1 {
+    font-size: clamp(4rem, 15vw, 10rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 0.9;
+}
+
+.chamada {
+    max-width: 34em;
+    margin: 28px 0 32px;
+    font-size: 1.1875rem;
+    color: var(--tinta-suave);
+}
+
+.acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 12px 22px;
+    border: 2px solid var(--tinta);
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.botao-cheio {
+    background: var(--tinta);
+    color: var(--papel);
+}
+
+.botao:hover {
+    background: var(--ingresso);
+    border-color: var(--ingresso);
+    color: var(--ingresso-tinta);
+}
+
+/* ============ Seções ============ */
+.secao {
+    padding: clamp(48px, 8vw, 88px) 0;
+    border-top: 1px solid var(--linha);
+}
+
+.secao h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+
+/* ============ Projetos: cartão em formato de ingresso ============ */
+.ingresso {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) 190px;
+    background: var(--cartao);
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.ingresso-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top left;
+}
+
+.ingresso-corpo {
+    padding: 28px;
+}
+
+.ingresso-corpo h3 {
+    font-size: 1.75rem;
+    margin-bottom: 12px;
+}
+
+.ingresso-corpo p {
+    margin: 0 0 16px;
+}
+
+.fatos {
+    margin: 0;
+    padding-left: 1.1em;
+    color: var(--tinta-suave);
+}
+
+/* Canhoto: a parte destacável do ingresso, separada por uma linha picotada */
+.ingresso-canhoto {
+    position: relative;
+    background: var(--ingresso);
+    color: var(--ingresso-tinta);
+    padding: 28px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    border-left: 3px dashed rgba(59, 42, 0, 0.35);
+}
+
+.ingresso-canhoto::before,
+.ingresso-canhoto::after {
+    content: "";
+    position: absolute;
+    left: -14px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--papel);
+}
+
+.ingresso-canhoto::before {
+    top: -13px;
+}
+
+.ingresso-canhoto::after {
+    bottom: -13px;
+}
+
+.tecnologias {
+    margin: 0 0 6px;
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.25;
+}
+
+.ingresso-canhoto a {
+    font-weight: 700;
+}
+
+.ingresso-proximo {
+    grid-template-columns: minmax(0, 1fr) 190px;
+    background: transparent;
+    border: 2px dashed var(--linha);
+}
+
+.ingresso-proximo .ingresso-canhoto {
+    background: transparent;
+    color: var(--tinta);
+    border-left-color: var(--linha);
+}
+
+.ingresso-proximo .ingresso-canhoto::before,
+.ingresso-proximo .ingresso-canhoto::after {
+    display: none;
+}
+
+/* ============ Sobre ============ */
+.sobre {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    column-gap: 56px;
+}
+
+.sobre h2 {
+    grid-column: 1 / -1;
+}
+
+.sobre-texto p {
+    margin: 0 0 16px;
+    max-width: 36em;
+}
+
+.sobre-fatos {
+    margin: 0;
+}
+
+.sobre-fatos div {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--linha);
+}
+
+.sobre-fatos div:first-child {
+    padding-top: 0;
+}
+
+.sobre-fatos dt {
+    font-weight: 700;
+}
+
+.sobre-fatos dd {
+    margin: 2px 0 0;
+    color: var(--tinta-suave);
+}
+
+/* ============ Contato ============ */
+.contato p {
+    margin: 0 0 16px;
+    color: var(--tinta-suave);
+}
+
+.email {
+    display: inline-block;
+    font-family: var(--fonte-titulo);
+    font-size: clamp(1.5rem, 5vw, 2.75rem);
+    font-weight: 700;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
+    word-break: break-all;
+}
+
+.email:hover {
+    text-decoration-color: var(--ingresso);
+}
+
+.redes {
+    list-style: none;
+    padding: 0;
+    margin: 28px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 28px;
+}
+
+/* ============ Rodapé ============ */
+.rodape {
+    max-width: var(--largura);
+    margin: 0 auto;
+    padding: 32px var(--margem) 48px;
+    color: var(--tinta-suave);
+    font-size: 0.9375rem;
+}
+
+/* ============ Celular e tablet ============ */
+@media (max-width: 860px) {
+    .ingresso,
+    .ingresso-proximo {
+        grid-template-columns: 1fr;
+    }
+
+    .ingresso-imagem img {
+        aspect-ratio: 16 / 10;
+        height: auto;
+    }
+
+    .ingresso-canhoto {
+        border-left: 0;
+        border-top: 3px dashed rgba(59, 42, 0, 0.35);
+    }
+
+    .ingresso-canhoto::before,
+    .ingresso-canhoto::after {
+        top: -14px;
+        bottom: auto;
+    }
+
+    .ingresso-canhoto::before {
+        left: -13px;
+    }
+
+    .ingresso-canhoto::after {
+        left: auto;
+        right: -13px;
+    }
+
+    .ingresso-proximo .ingresso-canhoto {
+        border-top-color: var(--linha);
+    }
+
+    .sobre {
+        grid-template-columns: 1fr;
+        row-gap: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .topo nav {
+        gap: 14px;
+        font-size: 0.9375rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
