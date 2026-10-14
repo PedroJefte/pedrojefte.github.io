@@ -1,133 +1,447 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedro Jefte · Desenvolvedor em Formação</title>
-    <meta name="description" content="Portfólio de Pedro Jefte, desenvolvedor front-end em formação em busca de estágio. Projetos em HTML, CSS e JavaScript.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedro Jefte · Desenvolvedor Front-end</title>
+  <meta name="description" content="Portfólio de Pedro Jefte, desenvolvedor front-end em formação em busca de estágio. Projetos em HTML, CSS e JavaScript.">
 
-    <!-- Prévia quando o link é colado no LinkedIn e no WhatsApp -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Pedro Jefte · Desenvolvedor Front-end">
-    <meta property="og:description" content="Desenvolvedor front-end em formação, em busca de estágio. Veja meus projetos.">
-    <meta property="og:url" content="https://pedrojefte.github.io/">
-    <meta property="og:image" content="https://pedrojefte.github.io/img/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta name="twitter:card" content="summary_large_image">
+  <!-- Prévia quando o link é colado no LinkedIn e no WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pedro Jefte · Desenvolvedor Front-end">
+  <meta property="og:description" content="Desenvolvedor front-end em formação, em busca de estágio. Veja meus projetos.">
+  <meta property="og:url" content="https://pedrojefte.github.io/">
+  <meta property="og:image" content="https://pedrojefte.github.io/assets/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
 
-    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
-    <header class="topo">
-        <a class="marca" href="#inicio">Pedro Jefte</a>
-        <nav aria-label="Seções">
-            <a href="#projetos">Projetos</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#contato">Contato</a>
-        </nav>
-    </header>
+  <main>
 
-    <main id="conteudo">
+    <!-- ===================== BARRA LATERAL ===================== -->
+    <aside class="sidebar" data-sidebar>
 
-        <!-- ===================== INÍCIO ===================== -->
-        <section id="inicio" class="abertura">
-            <p class="status"><span class="ponto" aria-hidden="true"></span> Em busca de estágio em desenvolvimento</p>
-            <h1>Pedro<br>Jefte</h1>
-            <p class="chamada">
-                Profissional de tecnologia em formação, com projeto publicado chamado CineVibe, um catálogo de filmes com funcionalidades de busca e favoritos.
-            </p>
-            <div class="acoes">
-                <a class="botao botao-cheio" href="#projetos">Ver projetos</a>
-                <a class="botao" href="curriculo-pedro-jefte.pdf" download>Baixar currículo</a>
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <!-- Troque por uma foto sua: coloque em assets/images/ e mude o src -->
+          <img src="./assets/images/avatar.svg" alt="Pedro Jefte" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Pedro Jefte">Pedro Jefte</h1>
+          <p class="title">Desenvolvedor Front-end</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Ver contatos</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
             </div>
+            <div class="contact-info">
+              <p class="contact-title">E-mail</p>
+              <a href="mailto:pedrojefte12@hotmail.com" class="contact-link">pedrojefte12@hotmail.com</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="school-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Formação</p>
+              <p class="contact-link">ADS · Uninassau</p>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Status</p>
+              <p class="contact-link">Em busca de estágio</p>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Localização</p>
+              <address>Recife, PE, Brasil</address>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://github.com/PedroJefte" class="social-link" aria-label="GitHub">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/pedro-jefte-407651405/" class="social-link" aria-label="LinkedIn">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="curriculo-pedro-jefte.pdf" class="social-link" aria-label="Baixar currículo" download>
+              <ion-icon name="document-text-outline"></ion-icon>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </aside>
+
+    <div class="main-content">
+
+      <!-- ===================== MENU ===================== -->
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link="sobre">Sobre</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="resumo">Resumo</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="portfolio">Portfólio</button>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- ===================== SOBRE ===================== -->
+      <article class="about active" data-page="sobre">
+
+        <header>
+          <h2 class="h2 article-title">Sobre mim</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Sou o Pedro, de Recife, e estudo Análise e Desenvolvimento de Sistemas na Uninassau.
+            Comecei a programar pelo front-end porque gosto de ver o resultado na hora, no navegador.
+          </p>
+          <p>
+            No CineVibe, meu primeiro projeto publicado, aprendi a manipular o DOM, a guardar dados com
+            localStorage e a adaptar o layout para o celular. Agora estou estudando Node.js e SQL e procuro
+            um estágio para aprender em um time de verdade.
+          </p>
         </section>
 
-        <!-- ===================== PROJETOS ===================== -->
-        <section id="projetos" class="secao">
-            <h2>Projetos</h2>
+        <section class="service">
 
-            <!-- Para adicionar um projeto, copie o <article class="ingresso"> inteiro e troque os textos -->
-            <article class="ingresso">
-                <a class="ingresso-imagem" href="https://pedrojefte.github.io/CineVibetrue/" tabindex="-1" aria-hidden="true">
-                    <img src="img/cinevibe.jpg" alt="" width="1200" height="750" loading="lazy">
-                </a>
-                <div class="ingresso-corpo">
-                    <h3>CineVibe</h3>
-                    <p>
-                        Catálogo de filmes e animes. Na página inicial dá para buscar por título enquanto digita e
-                        marcar favoritos, que continuam salvos quando você volta. Cada filme tem sinopse, elenco
-                        e avaliação com estrelas.
-                    </p>
-                    <ul class="fatos">
-                        <li>Busca em tempo real com JavaScript</li>
-                        <li>Favoritos salvos com localStorage</li>
-                        <li>Layout responsivo para celular</li>
-                    </ul>
-                </div>
-                <div class="ingresso-canhoto">
-                    <p class="tecnologias">HTML, CSS, JavaScript</p>
-                    <a href="https://pedrojefte.github.io/CineVibetrue/">Abrir site</a>
-                    <a href="https://github.com/PedroJefte/CineVibetrue">Ver código</a>
-                </div>
-            </article>
-        </section>
+          <h3 class="h3 service-title">O que eu faço</h3>
 
-        <!-- ===================== SOBRE ===================== -->
-        <section id="sobre" class="secao sobre">
-            <h2>Sobre</h2>
-            <div class="sobre-texto">
-                <p>Sou o Pedro, de Camaragibe, e estudo ADS na Uninassau.</p>
-                <p>
-                    Comecei a programar pelo front-end porque gosto de ver o resultado na hora, no navegador.
-                    No CineVibe aprendi a manipular o DOM, a guardar dados com localStorage e a adaptar o
-                    layout para o celular.
+          <ul class="service-list">
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg" alt="" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Interfaces web</h4>
+                <p class="service-item-text">
+                  Páginas com HTML e CSS bem estruturados, pensando em leitura e acessibilidade.
                 </p>
-                <p>Agora estou estudando Node.js e SQL para ampliar minhas habilidades em desenvolvimento de software e bancos de dados, e procuro um estágio para aprender em um time de verdade.</p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Interatividade com JavaScript</h4>
+                <p class="service-item-text">
+                  Busca em tempo real, favoritos salvos e manipulação do DOM sem frameworks.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Layout responsivo</h4>
+                <p class="service-item-text">
+                  Sites que funcionam bem no celular, no tablet e no computador.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Back-end em estudo</h4>
+                <p class="service-item-text">
+                  Aprendendo Node.js e SQL para construir aplicações completas.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+      <!-- ===================== RESUMO ===================== -->
+      <article class="resume" data-page="resumo">
+
+        <header>
+          <h2 class="h2 article-title">Resumo</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
             </div>
-            <dl class="sobre-fatos">
-                <div>
-                    <dt>Formação</dt>
-                    <dd>ADS · UNINASSAU · conclusão em 2026</dd>
-                </div>
-                <div>
-                    <dt>Tecnologias</dt>
-                    <dd>HTML, CSS, JavaScript, Python, Git, GitHub, VS Code</dd>
-                </div>
-                <div>
-                    <dt>Estudando</dt>
-                    <dd>Node.js e SQL</dd>
-                </div>
-                <div>
-                    <dt>Disponível para</dt>
-                    <dd>Estágio · [presencial em cidade / híbrido / remoto]</dd>
-                </div>
-            </dl>
+            <h3 class="h3">Formação</h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Análise e Desenvolvimento de Sistemas · Uninassau</h4>
+              <span>Conclusão em 2026</span>
+              <p class="timeline-text">
+                Graduação tecnológica com foco em programação, banco de dados e engenharia de software.
+              </p>
+            </li>
+          </ol>
+
         </section>
 
-        <!-- ===================== CONTATO ===================== -->
-        <section id="contato" class="secao contato">
-            <h2>Contato</h2>
-            <p>Tem uma vaga de estágio ou quer conversar sobre um projeto? Me chama.</p>
-            <a class="email" href="mailto:pedrojefte12@hotmail.com">pedrojefte12@hotmail.com</a>
-            <ul class="redes">
-                <li><a href="https://www.linkedin.com/in/pedro-jefte-407651405/">LinkedIn</a></li>
-                <li><a href="https://github.com/PedroJefte">GitHub</a></li>
-                <li><a href="curriculo-pedro-jefte.pdf" download>Currículo em PDF</a></li>
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="code-slash-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Projetos</h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">CineVibe</h4>
+              <span>Projeto pessoal · HTML, CSS, JavaScript</span>
+              <p class="timeline-text">
+                Catálogo de filmes e animes com busca em tempo real, favoritos salvos com localStorage
+                e layout responsivo.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Este portfólio</h4>
+              <span>Projeto pessoal · publicado no GitHub Pages</span>
+              <p class="timeline-text">
+                Site pessoal com navegação por abas e card com os detalhes de cada projeto.
+              </p>
+            </li>
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">Minhas habilidades</h3>
+
+          <!-- Ajuste as porcentagens para refletir o seu nível -->
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">HTML e CSS</h5>
+                <data value="75">75%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">JavaScript</h5>
+                <data value="60">60%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 60%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Git e GitHub</h5>
+                <data value="60">60%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 60%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Python</h5>
+                <data value="40">40%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 40%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Node.js e SQL</h5>
+                <data value="25">25%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 25%;"></div>
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+      <!-- ===================== PORTFÓLIO ===================== -->
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfólio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+            <li class="filter-item">
+              <button class="active" data-filter-btn="todos">Todos</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn="front-end">Front-end</button>
+            </li>
+          </ul>
+
+          <div class="filter-select-box">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-select-value>Escolha a categoria</div>
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+            </button>
+            <ul class="select-list">
+              <li class="select-item">
+                <button data-select-item="todos">Todos</button>
+              </li>
+              <li class="select-item">
+                <button data-select-item="front-end">Front-end</button>
+              </li>
             </ul>
+          </div>
+
+          <!--
+            Para adicionar um projeto, copie um <li class="project-item"> inteiro e troque os textos.
+            O que está dentro de <template> aparece no card que abre ao clicar.
+          -->
+          <ul class="project-list">
+
+            <li class="project-item active" data-filter-item data-category="front-end">
+              <a href="https://pedrojefte.github.io/CineVibetrue/" data-project-open>
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/cinevibe.jpg" alt="Tela inicial do CineVibe" loading="lazy">
+                </figure>
+                <h3 class="project-title">CineVibe</h3>
+                <p class="project-category">Front-end · HTML, CSS, JavaScript</p>
+              </a>
+
+              <template data-project-details>
+                <img class="projeto-modal-img" src="./assets/images/cinevibe.jpg" alt="Tela inicial do CineVibe">
+                <div class="projeto-modal-corpo">
+                  <p class="projeto-modal-categoria">Front-end · HTML, CSS, JavaScript</p>
+                  <h3 class="h3 projeto-modal-titulo">CineVibe</h3>
+                  <p class="projeto-modal-texto">
+                    Catálogo de filmes e animes. Na página inicial dá para buscar por título enquanto digita e
+                    marcar favoritos, que continuam salvos quando você volta. Cada filme tem sinopse, elenco
+                    e avaliação com estrelas.
+                  </p>
+                  <ul class="projeto-modal-fatos">
+                    <li>Busca em tempo real com JavaScript</li>
+                    <li>Favoritos salvos com localStorage</li>
+                    <li>Layout responsivo para celular</li>
+                  </ul>
+                  <div class="projeto-modal-acoes">
+                    <a class="projeto-modal-btn principal" href="https://pedrojefte.github.io/CineVibetrue/" target="_blank" rel="noopener">
+                      <ion-icon name="open-outline"></ion-icon>
+                      <span>Ver projeto</span>
+                    </a>
+                    <a class="projeto-modal-btn" href="https://github.com/PedroJefte/CineVibetrue" target="_blank" rel="noopener">
+                      <ion-icon name="logo-github"></ion-icon>
+                      <span>Repositório</span>
+                    </a>
+                  </div>
+                </div>
+              </template>
+            </li>
+
+          </ul>
+
+          <!-- Card do projeto (preenchido pelo script ao clicar) -->
+          <dialog class="projeto-modal" data-project-modal aria-label="Detalhes do projeto">
+            <button class="projeto-modal-fechar" data-project-close aria-label="Fechar">
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+            <div data-project-content></div>
+          </dialog>
+
         </section>
-    </main>
 
-    <footer class="rodape">
-        <p>Feito por Pedro Jefte com HTML, CSS e JavaScript · <span id="ano">2026</span></p>
-    </footer>
+      </article>
 
-    <script src="script.js"></script>
+    </div>
+
+  </main>
+
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
